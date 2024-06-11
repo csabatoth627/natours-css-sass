@@ -6,6 +6,16 @@
 
 html {
   font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -15,4 +25,8 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
